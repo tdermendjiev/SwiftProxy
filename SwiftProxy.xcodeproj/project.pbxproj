@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B80A054292E1F79009545BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B80A053292E1F79009545BF /* main.m */; };
+		2B80A05C292E1F84009545BF /* SwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80A05B292E1F84009545BF /* SwiftClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		2B80A050292E1F79009545BF /* SwiftProxy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftProxy; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B80A053292E1F79009545BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B80A05A292E1F84009545BF /* SwiftProxy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProxy-Bridging-Header.h"; sourceTree = "<group>"; };
+		2B80A05B292E1F84009545BF /* SwiftClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				2B80A053292E1F79009545BF /* main.m */,
+				2B80A05B292E1F84009545BF /* SwiftClass.swift */,
+				2B80A05A292E1F84009545BF /* SwiftProxy-Bridging-Header.h */,
 			);
 			path = SwiftProxy;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 				TargetAttributes = {
 					2B80A04F292E1F79009545BF = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B80A05C292E1F84009545BF /* SwiftClass.swift in Sources */,
 				2B80A054292E1F79009545BF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,20 +245,37 @@
 		2B80A058292E1F79009545BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6KAAZFWNY;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProxy/SwiftProxy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		2B80A059292E1F79009545BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6KAAZFWNY;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProxy/SwiftProxy-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
